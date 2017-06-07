@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         let drowView = drawImage(self.scrollView.frame)
         self.scrollView.addSubview(drowView)
         
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,6 +96,10 @@ class ViewController: UIViewController {
         
         // テキストをdrawInRectメソッドでレンダリング
         text.draw(in: textRect, withAttributes: textFontAttributes)
+        
+    }
+    
+    func test(){
         
     }
     
