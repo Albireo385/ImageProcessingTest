@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         
         
         let text = "Emmy's shopping in \nLondon."
-        let font = UIFont.boldSystemFont(ofSize: 20)
         
         
         let image = UIImage(named:"neko.jpg")!.mask(image: UIImage(named: "mask.jpg"))
@@ -67,21 +66,7 @@ class ViewController: UIViewController {
         let nekoRect = CGRect(x: 0,y: 0,width: imageWidth / 5,height: imageHeight/5)
         image.draw(in: nekoRect)
         
-        // テキストの描画領域
-        let textRect  = CGRect(x:100, y:imageHeight/2+40, width:imageWidth-250, height:120)
-        
-        let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
-        
-        let textFontAttributes = [
-            NSFontAttributeName: font,
-            NSForegroundColorAttributeName: UIColor.yellow,
-            NSParagraphStyleAttributeName: textStyle
-        ]
-        
-        // テキストをdrawInRectメソッドでレンダリング
-        text.draw(in: textRect, withAttributes: textFontAttributes)
-        
-        drawtext()
+        drawtext(text)
         
         //　現在のcontextの情報取得
         let img = UIGraphicsGetImageFromCurrentImageContext()
@@ -97,9 +82,8 @@ class ViewController: UIViewController {
         
     }
     
-    func drawtext(){
+    func drawtext(_ text:String){
         
-        let text = "Emmy's shopping in \nLondon."
         let font = UIFont.boldSystemFont(ofSize: 20)
         
         // テキストの描画領域
