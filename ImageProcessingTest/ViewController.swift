@@ -43,9 +43,7 @@ class ViewController: UIViewController {
         let imgView = UIImageView(frame: frame)
         //self.view.addSubview(imgView)
         
-        
         let text = "Emmy's shopping in \nLondon."
-        
         
         let image = UIImage(named:"neko.jpg")!.mask(image: UIImage(named: "mask.jpg"))
         
